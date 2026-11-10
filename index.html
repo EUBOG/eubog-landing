@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eubog.ru — Python, Frontend, Telegram боты, парсинг</title>
+    <meta name="description" content="Лендинг проекта eubog.ru. Python (Flask, Django, FastAPI), Frontend (HTML, CSS, JS), Telegram боты на Aiogram, SQL, парсинг. Готов к новым проектам.">
+    <meta name="keywords" content="eubog, Python, Flask, Django, FastAPI, Frontend, Telegram бот, Aiogram, SQL, парсинг, разработка">
+    <meta name="author" content="eubog">
+    <meta property="og:title" content="eubog.ru — Простой лендинг">
+    <meta property="og:description" content="Python, Frontend, Telegram боты, SQL, парсинг. Готов к новым проектам.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eubog.ru/">
+    <meta property="og:image" content="https://eubog.ru/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="/favicon128.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">eubog<span>.ru</span></div>
+        <nav>
+            <a href="#about">Обо мне</a>
+            <a href="#skills">Навыки</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1><span class="hero-word">Просто</span> <span>лендинг</span></h1>
+        <p>Первый лендинг на BeGet.<br>
+	Здесь я тестирую и развиваю свои проекты.</p>
+        <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Flask · Django · FastAPI</span>
+            <span class="tag">Frontend</span>
+            <span class="tag">Telegram боты</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Парсинг</span>
+        </div>
+        <a href="#contact" class="btn">Связаться</a>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <h2>Обо мне</h2>
+            <p>Привет! Я разработчик из eubog.ru.<br>Умею в IT: Python (Flask, Django, FastAPI и т.д.), фронтенд, боты (Telegram и MAX), парсинг.<br>Готов к новым проектам и интересным задачам!</p>
+        </div>
+    </section>
+
+    <section class="section" id="skills">
+        <div class="container">
+            <h2>Что я умею</h2>
+            <p>Стек технологий, с которыми работаю.</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <span class="skill-emoji">🐍</span>
+                    <h3>Python</h3>
+                    <p>Backend-разработка на Flask, Django, FastAPI.</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-emoji">🎨</span>
+                    <h3>Frontend</h3>
+                    <p>HTML, CSS, JavaScript для красивых работающих интерфейсов.</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-emoji">🤖</span>
+                    <h3>Telegram (и MAX) боты</h3>
+                    <p>Создание ботов на Aiogram (и не только).</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-emoji">💾</span>
+                    <h3>СУБД SQL</h3>
+                    <p>Создание и администрирование баз данных.</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-emoji">🛠</span>
+                    <h3>Парсинг</h3>
+                    <p>Сбор данных с веб-сайтов.</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-emoji">❄</span>
+                    <h3>Энимо</h3>
+                    <p>Скоро здесь появится что-то ещё.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p>Готов к новым проектам и интересным задачам!</p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="label">Email</div>
+                    <div class="value"><a href="mailto:eubog@yandex.ru">eubog@yandex.ru</a></div>
+                </div>
+                <div class="contact-card">
+                    <div class="label">Telegram</div>
+                    <div class="value"><a href="https://t.me/eubog">@eubog</a></div>
+                </div>
+                <div class="contact-card">
+                    <div class="label">GitHub</div>
+                    <div class="value"><a href="https://github.com/EUBOG" target="_blank" rel="noopener">github.com/EUBOG</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 eubog.ru — права защищены
+        </div>
+    </footer>
+
+    <!-- Чат-виджет (без сервера, только локальная логика) -->
+    <div class="chat-widget">
+        <button class="chat-toggle" id="chatToggle" aria-label="Открыть чат">💬</button>
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                <span>Помощник eubog</span>
+                <button class="chat-close" id="chatClose" aria-label="Закрыть">×</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="msg bot">Привет! Я виджет-помощник сайта eubog.ru. Выберите, что вас интересует:</div>
+                <div class="btn-group">
+                    <a href="#" class="btn-chip" data-msg="about">Обо мне</a>
+                    <a href="#" class="btn-chip" data-msg="skills">Навыки</a>
+                    <a href="#" class="btn-chip" data-msg="contact">Контакты</a>
+                    <a href="#" class="btn-chip" data-msg="projects">Проекты</a>
+                </div>
+                <div class="chat-empty">Это локальный виджет, данные никуда не отправляются.</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Напишите сообщение..." autocomplete="off">
+                <button id="chatSend">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('chatToggle');
+        const box = document.getElementById('chatBox');
+        const close = document.getElementById('chatClose');
+        const messages = document.getElementById('chatMessages');
+        const input = document.getElementById('chatInput');
+        const send = document.getElementById('chatSend');
+
+        const replies = {
+            about: 'Я разработчик с eubog.ru.<br>Умею Python (Flask, Django, FastAPI), фронтенд, Telegram и MAX боты, БД SQL, парсинг, энимо...',
+            skills: 'Мой стек:<br>• Python, Flask, Django, FastAPI<br>• HTML/CSS/JS, Aiogram<br>• SQL, парсинг.',
+            contact: 'Связаться со мной:<br>e-mail: eubog@yandex.ru<br>Telegram: @eubog<br>GitHub: github.com/EUBOG.',
+            projects: 'Сейчас этот сайт — тестовый полигон на BeGet.<br>Но скоро здесь появятся мои проекты.'
+        };
+
+        function addMsg(text, cls) {
+            const div = document.createElement('div');
+            div.className = 'msg ' + cls;
+            div.innerHTML = text;
+            messages.appendChild(div);
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        toggle.addEventListener('click', () => {
+            const isOpen = box.classList.toggle('open');
+            toggle.classList.toggle('active', isOpen);
+            if (isOpen) input.focus();
+        });
+        close.addEventListener('click', () => {
+            box.classList.remove('open');
+            toggle.classList.remove('active');
+        });
+
+        function handleUserMsg(text) {
+            addMsg(text, 'user');
+            setTimeout(() => {
+                const key = Object.keys(replies).find(k => text.toLowerCase().includes(k)) || null;
+                addMsg(key ? replies[key] : 'Я пока не понимаю сообщения. Только учусь. А пока попробуйте нажать на одну из кнопок выше.', 'bot');
+            }, 400);
+        }
+
+        send.addEventListener('click', () => {
+            const val = input.value.trim();
+            if (!val) return;
+            handleUserMsg(val);
+            input.value = '';
+        });
+        input.addEventListener('keypress', (e) => { if (e.key === 'Enter') send.click(); });
+
+        document.querySelectorAll('.btn-chip').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const key = btn.getAttribute('data-msg');
+                handleUserMsg(key);
+            });
+        });
+
+        function fontShakePage() {
+            document.querySelector('.container').classList.add('font-shake');
+            setTimeout(() => {
+                document.querySelector('.container').classList.remove('font-shake');
+            }, 400);
+        }
+
+        const heroWord = document.querySelector('.hero-word');
+        const words = ['Просто', 'Как бы', 'Не просто', 'Только', 'Всего лишь', 'Не только лишь', 'Всё ещё кому-то нужный'];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeWord() {
+            const current = words[wordIndex];
+            heroWord.textContent = isDeleting
+                ? current.substring(0, charIndex - 1)
+                : current.substring(0, charIndex + 1);
+
+            if (!isDeleting && charIndex === current.length) {
+                isDeleting = true;
+                fontShakePage();
+                setTimeout(typeWord, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(typeWord, 500);
+            } else {
+                charIndex += isDeleting ? -1 : 1;
+                setTimeout(typeWord, isDeleting ? 40 : 80);
+            }
+        }
+
+        setTimeout(typeWord, 800);
+    </script>
+
+    <!-- Яндекс.Метрика — замените YOUR_COUNTER_ID на реальный номер счётчика -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(113701091, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/113701091" style="position:absolute; left:-9999px;" alt=""/></div></noscript>
+
+</body>
+</html>
